@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/RESTfulExample.iml" filepath="$PROJECT_DIR$/RESTfulExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Portals-Api.iml" filepath="$PROJECT_DIR$/Portals-Api.iml" />
     </modules>
   </component>
 </project>

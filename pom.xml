@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.mkyong.common</groupId>
-	<artifactId>RESTfulExample</artifactId>
+	<artifactId>Portals-Api</artifactId>
 	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
     
@@ -16,8 +16,7 @@
     <jetty.maven.plugin>9.4.3.v20170317</jetty.maven.plugin>
   </properties>
     
-	<name>RESTfulExample Maven Webapp</name>
-	<url>http://maven.apache.org</url>
+	<name>GCP Portal Apis</name>
 
 	<repositories>
 		<repository>
@@ -41,11 +40,16 @@
 			<artifactId>jersey-server</artifactId>
 			<version>1.8</version>
 		</dependency>
+		<dependency>
+			<groupId>com.google.appengine</groupId>
+			<artifactId>appengine-api-1.0-sdk</artifactId>
+			<version>1.9.59</version>
+		</dependency>
 
 	</dependencies>
 
 	<build>
-		<finalName>RESTfulExample</finalName>
+		<finalName>Portals-Api</finalName>
 		<plugins>
 			<plugin>                          <!-- Used for local debugging -->
 				<groupId>org.eclipse.jetty</groupId>
