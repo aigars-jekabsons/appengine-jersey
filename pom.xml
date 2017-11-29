@@ -1,0 +1,77 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.mkyong.common</groupId>
+	<artifactId>RESTfulExample</artifactId>
+	<packaging>war</packaging>
+	<version>1.0-SNAPSHOT</version>
+    
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source> <!-- REQUIRED -->
+    <maven.compiler.target>1.8</maven.compiler.target> <!-- REQUIRED -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <failOnMissingWebXml>false</failOnMissingWebXml> <!-- REQUIRED -->
+    <appengine.maven.plugin>1.3.2</appengine.maven.plugin>
+    <jetty.maven.plugin>9.4.3.v20170317</jetty.maven.plugin>
+  </properties>
+    
+	<name>RESTfulExample Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+
+	<repositories>
+		<repository>
+			<id>maven2-repository.java.net</id>
+			<name>Java.net Repository for Maven</name>
+			<url>http://download.java.net/maven/2/</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.2</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-server</artifactId>
+			<version>1.8</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<finalName>RESTfulExample</finalName>
+		<plugins>
+			<plugin>                          <!-- Used for local debugging -->
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>9.4.3.v20170317</version>
+			</plugin>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+                  <plugin>
+        <groupId>com.google.cloud.tools</groupId>
+        <artifactId>appengine-maven-plugin</artifactId>
+        <version>${appengine.maven.plugin}</version>
+        <configuration>
+          <!-- deploy configuration -->
+<!--
+          <deploy.promote>true</deploy.promote>                           <!~~ DEFAULT value ~~>
+          <deploy.stopPreviousVersion>true</deploy.stopPreviousVersion>   <!~~ DEFAULT value ~~>
+ -->
+        </configuration>
+      </plugin>
+		</plugins>
+	</build>
+
+</project>
